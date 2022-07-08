@@ -97,6 +97,9 @@ section {
 #submit {
     background-color: orange;
 }
+#submit:hover {
+cursor: pointer;
+}
 input {
     font-family: 'Indie Flower', cursive;
 
@@ -143,6 +146,7 @@ button {
     background-color: orange;
 }
 button:hover {
+    cursor: pointer;
     background-color: rgb(153, 90, 246);
 }
 
@@ -151,53 +155,4 @@ button:hover {
 }
 .h1 {
     flex-basis: 50%;
-}
-@media screen and (max-width:768px) {
-    
-    body {
-        width: 100vh;
-        
-    }
-  
-    .header {
-        padding-left: 70px;
-        width: 100%;
-    }
-  .h1 h1 {
-    font-size: 5vh;
-  }
-  /* h2 {
-    font-size: 3vh;
-  } */
-  .coins {
-    flex-basis: 30%;
-  }
-  .h1 {
-    flex-basis: 60%;
-  }
-  h3 {
-    font-size: 3vh;
-  }
-  .inputs {
-    
-    flex-basis: 40%;
-  }
-  section {
-    width: 110%;
-  }
-  .highscore {
-   flex-basis: 30%;
-  }
-  .guessing {
-    padding-top: 10px;
-  flex-basis: 40%;
-  }
-  input {
- 
-    height: 6vh;
-    width: 15vh;
-  }
-  #submit {
-  padding-top: 10px;
-  }
 }

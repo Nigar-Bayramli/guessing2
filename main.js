@@ -2,7 +2,7 @@ let guesses = 10
 let number = Math.trunc( Math.random() * 20) + 1
 let highscore = 0
 let coin = 0
-coin ++
+
 const display = function(message){
     document.querySelector('.condition') .textContent = message
 }
@@ -17,7 +17,7 @@ else if (guess === number) {
         highscore = guesses;
         document.querySelector('.high').textContent = highscore;
       }
-    document.querySelector('.coin') .textContent = coin 
+    document.querySelector('.coin') .textContent = coin + 1
     
     document.querySelector('.footer-message') .textContent = 'Good job buddy!👍' 
     display('Correct number!')
@@ -32,6 +32,7 @@ else if(guess !== number) {
     document.querySelector('.guesses') .textContent = guesses  
     }
     else {
+        display('Game over!')
         document.querySelector('.footer-message') .textContent = 'Next time better luck!:)' 
         displaymessage('Game over')
     }
@@ -43,7 +44,8 @@ document.querySelector('.again').addEventListener('click', function() {
 
        number = Math.trunc( Math.random() * 20) + 1
      guesses = 10
-  
+     coin = coin + 1
+     document.querySelector('.coin') .textContent = coin
     display('Guess a number')
     document.querySelector('.guesses') .textContent = guesses
     document.querySelector('.guess').value = ''
